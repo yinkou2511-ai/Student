@@ -1,0 +1,94 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --panel-border: #334155;
+  --text: #e5e7eb;
+  --accent: #22c55e;
+  --accent-2: #16a34a;
+  --danger: #f97316;
+  --grid: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #1e293b, var(--bg));
+}
+
+.game-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.panel {
+  width: min(92vw, 520px);
+  background: color-mix(in srgb, var(--panel) 92%, black 8%);
+  border: 1px solid var(--panel-border);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 8px 0 16px;
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.hud-item {
+  flex: 1;
+  text-align: center;
+  background: #0b1220;
+  border: 1px solid #253142;
+  border-radius: 10px;
+  padding: 10px 8px;
+}
+
+#game-canvas {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  background: #0b1020;
+  display: block;
+}
+
+.status {
+  margin: 12px 0 0;
+  text-align: center;
+  color: #cbd5e1;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .subtitle,
+  .status,
+  .hud-item {
+    font-size: 0.9rem;
+  }
+}
