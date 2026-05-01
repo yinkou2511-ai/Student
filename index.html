@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>简约贪吃蛇</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-page">
+      <section class="panel">
+        <h1>🐍 简约贪吃蛇</h1>
+        <p class="subtitle">方向键 / WASD 控制移动，空格开始或重开</p>
+
+        <div class="hud">
+          <div class="hud-item">分数：<span id="score">0</span></div>
+          <div class="hud-item">最高分：<span id="best-score">0</span></div>
+        </div>
+
+        <canvas id="game-canvas" width="420" height="420" aria-label="贪吃蛇游戏画布"></canvas>
+
+        <p id="status" class="status">按空格键开始游戏</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
